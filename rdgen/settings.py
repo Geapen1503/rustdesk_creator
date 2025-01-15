@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-!(t-!f#6g#sr%yfded9(xha)g+=!6craeez^cp+*&bz_7vdk61
 #GHUSER = os.environ.get("GHUSER", '')
 #GHBEARER = os.environ.get("GHBEARER", '')
 GHUSER = "Geapen1503"
-GHBEARER = ""
+GHBEARER = "your_secret_here"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
