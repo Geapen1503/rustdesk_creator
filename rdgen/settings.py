@@ -21,8 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-!(t-!f#6g#sr%yfded9(xha)g+=!6craeez^cp+*&bz_7vdk61'
-GHUSER = os.environ.get("GHUSER", '')
-GHBEARER = os.environ.get("GHBEARER", '')
+#GHUSER = os.environ.get("GHUSER", '')
+#GHBEARER = os.environ.get("GHBEARER", '')
+GHUSER = "Geapen1503"
+GHBEARER = "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"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
