@@ -212,7 +212,7 @@ def generator_view(request):
         create_github_run(myuuid)
         response = requests.post(url, json=data, headers=headers)
         print(response)
-        print(response.text)  # Add this line to print the response text for debugging
+        print(response.text)
         if response.status_code == 204:
             return render(request, 'waiting.html',
                           {'filename': filename, 'uuid': myuuid, 'status': "Starting generator...please wait",
