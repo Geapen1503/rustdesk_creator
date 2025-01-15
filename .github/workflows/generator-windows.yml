@@ -586,7 +586,7 @@ jobs:
           mkdir -p ./downloads
           curl -i -X POST -H "Content-Type: multipart/form-data" -H "Authorization: Bearer ${{ fromJson(inputs.extras).token }}" -F "file=@./SignOutput/${{ inputs.filename }}.exe" -o ./downloads/${{ inputs.filename }}.exe ${{ inputs.apiServer }}/api/save_custom_client
           curl -i -X POST -H "Content-Type: multipart/form-data" -H "Authorization: Bearer ${{ fromJson(inputs.extras).token }}" -F "file=@./SignOutput/${{ inputs.filename }}.msi" -o ./downloads/${{ inputs.filename }}.msi ${{ inputs.apiServer }}/api/save_custom_client
-          
+
       - name: Report Status
         uses: fjogeleit/http-request-action@v1
         with:
