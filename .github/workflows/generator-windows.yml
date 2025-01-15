@@ -576,8 +576,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p ./downloads
-          curl -i -X POST -H "Content-Type: multipart/form-data" -H "Authorization: Bearer ${{ fromJson(inputs.extras).token }}" -F "file=@./SignOutput/${{ inputs.filename }}.exe" -F "uuid=${{ inputs.uuid }}" -o ./downloads/${{ inputs.filename }}.exe ${{ http://127.0.0.1:8000/ }}/save_custom_client
-          curl -i -X POST -H "Content-Type: multipart/form-data" -H "Authorization: Bearer ${{ fromJson(inputs.extras).token }}" -F "file=@./SignOutput/${{ inputs.filename }}.msi" -F "uuid=${{ inputs.uuid }}" -o ./downloads/${{ inputs.filename }}.msi ${{ http://127.0.0.1:8000/ }}/save_custom_client
+          curl -i -X POST -H "Content-Type: multipart/form-data" -H "Authorization: Bearer ${{ fromJson(inputs.extras).token }}" -F "file=@./SignOutput/${{ inputs.filename }}.exe" -F "uuid=${{ inputs.uuid }}" -o ./downloads/${{ inputs.filename }}.exe ${{ secrets.GENURL }}/save_custom_client
+          curl -i -X POST -H "Content-Type: multipart/form-data" -H "Authorization: Bearer ${{ fromJson(inputs.extras).token }}" -F "file=@./SignOutput/${{ inputs.filename }}.msi" -F "uuid=${{ inputs.uuid }}" -o ./downloads/${{ inputs.filename }}.msi ${{ secrets.GENURL }}/save_custom_client
 
       - name: send file to api server
         if: ${{ fromJson(inputs.extras).rdgen == 'false' }}
